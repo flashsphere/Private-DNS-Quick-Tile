@@ -28,6 +28,12 @@ android {
         compose true
         buildConfig true
     }
+    dependenciesInfo {
+        // Disables dependency metadata when building APKs.
+        includeInApk = false
+        // Disables dependency metadata when building Android App Bundles.
+        includeInBundle = false
+    }
     signingConfigs {
         release {
             storeFile file(PRIVATE_DNS_QS_RELEASE_STORE_FILE)
